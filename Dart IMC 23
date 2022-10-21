@@ -1,0 +1,27 @@
+class IMC{
+  
+  final double altura;
+  final double peso;
+  IMC(this.altura,this.peso);
+  
+  mathIMC(){
+    var calc = peso / (altura*2);
+    var imc = calc.toStringAsFixed(1);
+    
+    if (calc < 18.5 && calc > 9){
+      print("$imc Magreza!!");return;}
+    if (calc >= 18.5 && calc < 24.9){
+      print("$imc Normal!!");return;}   
+    if (calc >= 24.9 && calc < 30){
+      print("$imc Sobrepeso!!");return;}
+    if (calc > 30 && calc < 60){
+      print("#$imc Obesidade!!");return;}
+    return print("Correção de valor necessária");
+  }
+} 
+
+void main(){
+
+IMC caio = IMC(1.84,55);
+
+caio.mathIMC();}
